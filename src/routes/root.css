@@ -1,0 +1,33 @@
+/* Root.css */
+
+/* Basic nav styling */
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #1a1a1a; /* dark background */
+  color: white;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+/* NavLink default style */
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Active link */
+nav a.active {
+  background-color: #185e23; /* dark green highlight */
+  color: white;
+}

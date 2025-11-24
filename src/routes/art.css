@@ -1,0 +1,49 @@
+.arts-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 20px;
+}
+
+.art-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.art-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.art-info {
+  padding: 15px;
+}
+
+.art-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.art-info p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.art-info a {
+  color: #25d366; /* WhatsApp green */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.art-info a:hover {
+  text-decoration: underline;
+}
