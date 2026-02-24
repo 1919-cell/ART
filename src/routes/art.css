@@ -1,5 +1,5 @@
 .art-card {
-  background: #111;
+  background: #eae7e737;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -30,7 +30,7 @@
 }
 
 .read-more {
-  color: #00bfff;
+  color: #0b1e14;
   cursor: pointer;
   font-weight: 600;
   margin-left: 5px;
@@ -38,6 +38,18 @@
 }
 
 .read-more:hover {
-  color: #1e90ff;
+  color: hsl(120, 17%, 2%);
+  text-decoration: underline;
+}
+/* WhatsApp link styling */
+.art-info a {
+  color: #25D366;        /* WhatsApp green-blue */
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.art-info a:hover {
+  color: #1ebe5d;        /* Slightly darker on hover */
   text-decoration: underline;
 }
