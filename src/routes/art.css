@@ -1,49 +1,43 @@
-.arts-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
-  gap: 20px;
-}
-
 .art-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  background: #111;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .art-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .art-image {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 220px;
   object-fit: cover;
 }
 
 .art-info {
-  padding: 15px;
+  padding: 16px;
 }
 
 .art-info h2 {
-  margin: 0 0 10px 0;
+  margin-bottom: 8px;
   font-size: 18px;
 }
 
 .art-info p {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.art-info a {
-  color: #25d366; /* WhatsApp green */
-  text-decoration: none;
-  font-weight: bold;
+.read-more {
+  color: #00bfff;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: color 0.2s ease;
 }
 
-.art-info a:hover {
+.read-more:hover {
+  color: #1e90ff;
   text-decoration: underline;
 }
