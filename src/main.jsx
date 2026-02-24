@@ -4,7 +4,6 @@ import {
   createHashRouter,
   RouterProvider,
 } from "react-router-dom";
-
 import Root from "./routes/root"; 
 import Home from "./routes/home";
 import Arts from "./routes/arts";
@@ -16,7 +15,7 @@ const router = createHashRouter([
     element: <Root />,
     children: [
       {
-        index: true,
+        index: true, 
         element: <Home />,
       },
       {
