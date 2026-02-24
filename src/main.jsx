@@ -1,20 +1,22 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import Root from "./routes/root"; 
 import Home from "./routes/home";
 import Arts from "./routes/arts";
 import Payments from "./routes/kupata";
-const router = createBrowserRouter([
+
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
     children: [
       {
-        index: true, 
+        index: true,
         element: <Home />,
       },
       {
