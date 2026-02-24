@@ -1,10 +1,10 @@
 import "./art.css";
 
 // Import images so Vite can handle them
-import wayImg from './covers/way.png';
-import mbImg from './covers/mb.jpg';
-import artImg from './covers/art.png';
-import woodsImg from './covers/woods.png';
+import wayImg from '../covers/way.png';
+import mbImg from '../covers/mb.jpg';
+import artImg from '../covers/art.png';
+import woodsImg from '../covers/woods.png';
 
 const artsData = [
   {
