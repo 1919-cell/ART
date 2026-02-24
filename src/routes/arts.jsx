@@ -4,9 +4,9 @@ import "./art.css";
 const artsData = [
   {
     id: 1,
-    title: "Sunset Painting",
-    image: "/covers/harmo.png",
-    description: "A beautiful sunset painting.",
+    title: "the way of nature",
+    image: "/covers/way.png",
+    description: "Every exproler thinks in the way to fine the way out the unpredictable world and this is the way that the author of this work thinks on his point of view ,you as explorer you can access it ,but mind only EXPLORERS  .",
     whatsappLink: "https://wa.me/255688198914", 
   },
   {

@@ -4,7 +4,7 @@ export default function Kupata() {
     fontStyle: "normal",
     padding: "40px",
     lineHeight: "1.6",
-    color: "#111", // default text color
+    color: "#111", 
   };
 
   return (
