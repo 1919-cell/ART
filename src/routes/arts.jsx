@@ -6,7 +6,7 @@ const artsData = [
     id: 1,
     title: "the way of nature",
     image: "/covers/way.png",
-    description: "Every exproler thinks in the way to fine the way out the unpredictable world and this is the way that the author of this work thinks on his point of view ,you as explorer you can access it ,but mind only EXPLORERS  .",
+    description: "True explorers of the universe gonna need this short writting",
     whatsappLink: "https://wa.me/255688198914", 
   },
   {
