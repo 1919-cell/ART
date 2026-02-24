@@ -53,3 +53,7 @@
   color: #1ebe5d;        /* Slightly darker on hover */
   text-decoration: underline;
 }
+/* Thin black box belonging to each art */
+.art-card {
+  border: 1px solid #000;
+}
