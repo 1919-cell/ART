@@ -8,8 +8,8 @@ const artsData = [
     image: "/ART/covers/way.png",
     name: "The Way of Nature",
     author: "Oden Mboya",
-    year: "2023",
-    genre: "Philosophy / Nature",
+    year: "2026",
+    genre: "Philosophy writing",
     service: "coal",
     price: null,
     shortDescription:
