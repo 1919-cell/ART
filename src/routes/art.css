@@ -3,57 +3,156 @@
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  border: 1px solid #000;
 }
-
 .art-card:hover {
   transform: translateY(-5px);
 }
-
 .art-image {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
-
 .art-info {
   padding: 16px;
 }
-
 .art-info h2 {
   margin-bottom: 8px;
   font-size: 18px;
 }
-
 .art-info p {
   font-size: 14px;
   line-height: 1.6;
 }
 
+/* Meta info block */
+.art-meta {
+  margin-top: 8px;
+}
+.art-meta p {
+  margin: 4px 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.meta-label {
+  font-weight: 700;
+  color: #111;
+}
+
+/* Service row */
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Service badge base */
+.service-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Coal — earthy dark */
+.service-coal {
+  background: #2c2c2c;
+  color: #d4d4d4;
+  border: 1px solid #555;
+}
+
+/* Crystal — icy blue */
+.service-crystal {
+  background: linear-gradient(135deg, #cce8f4, #a8d4ee);
+  color: #0a4a6e;
+  border: 1px solid #7ab8d9;
+}
+
+/* Diamond — gold/luxury */
+.service-diamond {
+  background: linear-gradient(135deg, #f7e97e, #f0c040);
+  color: #5a3e00;
+  border: 1px solid #c9a020;
+}
+
+/* Free tag next to coal */
+.free-tag {
+  font-size: 11px;
+  color: #2e7d32;
+  font-weight: 700;
+  background: #e8f5e9;
+  padding: 1px 7px;
+  border-radius: 10px;
+  border: 1px solid #a5d6a7;
+}
+
+/* Price row */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.price-usd {
+  font-weight: 700;
+  color: #1a6b2f;
+}
+.price-sep {
+  color: #888;
+}
+.price-tsh {
+  font-weight: 700;
+  color: #7b4a00;
+}
+
+/* Read more */
 .read-more {
   color: #0b1e14;
   cursor: pointer;
   font-weight: 600;
-  margin-left: 5px;
+  margin-left: 4px;
   transition: color 0.2s ease;
 }
-
 .read-more:hover {
   color: hsl(120, 17%, 2%);
   text-decoration: underline;
 }
-/* WhatsApp link styling */
+
+/* Download button */
+.expanded-actions {
+  margin-top: 10px;
+}
+.download-btn {
+  background: #0b1e14;
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.download-btn:hover {
+  background: #1a3d28;
+}
+
+/* Footer row with WhatsApp */
+.card-footer {
+  margin-top: 10px;
+}
 .art-info a {
-  color: #25D366;        /* WhatsApp green-blue */
+  color: #25D366;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
 }
-
 .art-info a:hover {
-  color: #1ebe5d;        /* Slightly darker on hover */
+  color: #1ebe5d;
   text-decoration: underline;
-}
-/* Thin black box belonging to each art */
-.art-card {
-  border: 1px solid #000;
 }
