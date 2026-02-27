@@ -10,6 +10,7 @@ const artsData = [
     author: "Oden Mboya",
     year: "2026",
     genre: "Philosophy writing",
+    type: "writing",
     service: "crystal",
     price: { usd: 15, tsh: 39000 },
     shortDescription:
@@ -19,24 +20,27 @@ const artsData = [
   {
     id: 2,
     title: "johani Art 01",
-    image: "/ART/covers/tree1.png",
+    image: "/ART/covers/tree2.png",
     name: "Johani Art 01",
     author: "Oden Mboya",
     year: "2026",
     genre: "Abstract",
-    service: "coal",
-    price: null,
-    shortDescription:"johani art series is picture art that carries the deep meaning of nature and human connection using abstract forms and symbolic elements.",
+    type: "picture",
+    service: "crystal",
+    price: { usd: 25, tsh: 65000 },
+    shortDescription:
+      "johani art series is picture art that carries the deep meaning of nature and human connection using abstract forms and symbolic elements.",
     whatsappLink: "https://wa.me/255688198914",
   },
   {
     id: 3,
     title: "Portrait Sketch",
-    image: "/ART/covers/art.png",
+    image: "/ART/covers/pic.jpg",
     name: "Portrait Sketch",
     author: "Unknown Artist",
     year: "2021",
     genre: "Sketch / Realism",
+    type: "picture",
     service: "diamond",
     price: { usd: 40, tsh: 104000 },
     shortDescription:
@@ -51,6 +55,7 @@ const artsData = [
     author: "Unknown Artist",
     year: "2023",
     genre: "Landscape / Nature",
+    type: "picture",
     service: "coal",
     price: null,
     shortDescription:
@@ -60,24 +65,27 @@ const artsData = [
 ];
 
 const SERVICE_CONFIG = {
-  coal:    { label: "Coal",     className: "service-coal"    },
-  crystal: { label: "Crystal",  className: "service-crystal" },
-  diamond: { label: "Diamond",  className: "service-diamond" },
+  coal:    { label: "Coal",    className: "service-coal"    },
+  crystal: { label: "Crystal", className: "service-crystal" },
+  diamond: { label: "Diamond", className: "service-diamond" },
 };
 
 function ServiceBadge({ service }) {
   const cfg = SERVICE_CONFIG[service];
   return (
     <span className={`service-badge ${cfg.className}`}>
-      {cfg.emoji} {cfg.label}
+      {cfg.label}
     </span>
   );
 }
 
 function ArtCard({ art }) {
   const [expanded, setExpanded] = useState(false);
-
   const toggleReadMore = () => setExpanded(!expanded);
+
+  const isPaidPicture =
+    art.type === "picture" &&
+    (art.service === "crystal" || art.service === "diamond");
 
   const handleDownload = async () => {
     try {
@@ -99,7 +107,21 @@ function ArtCard({ art }) {
 
   return (
     <div className="art-card">
-      <img src={art.image} alt={art.title} className="art-image" />
+      <div className="art-image-wrapper">
+
+        {isPaidPicture ? (
+          <>
+            <img src={art.image} alt={art.title} className="art-image" />
+            <img src={art.image} alt="" className="art-image-mirror" aria-hidden="true" />
+            <div className="preview-badge">Preview only</div>
+          </>
+        ) : (
+          <img src={art.image} alt={art.title} className="art-image"
+            style={{ height: "100%", position: "absolute", top: 0 }} />
+        )}
+
+      </div>
+
       <div className="art-info">
         <h2>{art.title}</h2>
 
@@ -109,7 +131,6 @@ function ArtCard({ art }) {
           <p><span className="meta-label">Year</span> : {art.year}</p>
           <p><span className="meta-label">Genre</span> : {art.genre}</p>
 
-          {/* Service */}
           <p className="service-row">
             <span className="meta-label">Service</span> :{" "}
             <ServiceBadge service={art.service} />
@@ -118,7 +139,6 @@ function ArtCard({ art }) {
             )}
           </p>
 
-          {/* Price — only for crystal & diamond */}
           {art.price && (
             <p className="price-row">
               <span className="meta-label">Price</span> :{" "}
@@ -128,7 +148,6 @@ function ArtCard({ art }) {
             </p>
           )}
 
-          {/* Short Description */}
           <p>
             <span className="meta-label">Short Description</span> :{" "}
             {!expanded ? (
@@ -149,10 +168,10 @@ function ArtCard({ art }) {
           </p>
         </div>
 
-        {expanded && (
+        {expanded && art.type === "picture" && !isPaidPicture && (
           <div className="expanded-actions">
             <button className="download-btn" onClick={handleDownload}>
-               Download picture
+              Download picture
             </button>
           </div>
         )}
