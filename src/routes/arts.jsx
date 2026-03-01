@@ -62,6 +62,21 @@ const artsData = [
       "Detailed landscape drawings inspired by natural scenery, atmosphere, and light variations across different environments.",
     whatsappLink: "https://wa.me/255688198914",
   },
+  {
+    id: 5,
+    title: "Landscape Drawing",
+    image: "/ART/covers/hug2.png",
+    name: "Landscape Drawing",
+    author: "Unknown Artist",
+    year: "2023",
+    genre: "Landscape / Nature",
+    type: "picture",
+    service: "coal",
+    price: null,
+    shortDescription:
+      "Detailed landscape drawings inspired by natural scenery, atmosphere, and light variations across different environments.",
+    whatsappLink: "https://wa.me/255688198914",
+  },
 ];
 
 const SERVICE_CONFIG = {
